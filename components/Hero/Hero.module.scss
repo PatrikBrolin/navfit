@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+.heroWrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  display: flex;
+  background-color: black;
+  .heroImg {
+    height: 100%;
+
+    flex-basis: 45%;
+    object-fit: cover;
+   @media (max-width: 768px){
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   }
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    // align-items: center;
+    justify-content: center;
+    flex-basis: 55%;
+    padding-left: 6%;
+    @media (max-width: 768px){
+    
+      z-index: 1;
+   
+     }
+    h2 {
+      @include headlineFontSize;
+      font-family: $headline;
+    }
+    p {
+      font-size: 30px;
+    }
+
+    button {
+      border: 1px solid white;
+      background: transparent;
+      padding: 15px 35px;
+      width: min-content;
+      color: white;
+      white-space: nowrap;
+    }
+  }
+}

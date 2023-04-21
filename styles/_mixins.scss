@@ -1,0 +1,39 @@
+@mixin headlineFontSize {
+  font-size: 20px;
+  @media (min-width: 500px) {
+    font-size: 4vw;
+  }
+  @media (min-width: 1500px) {
+    font-size: 60px;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 576px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 768px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
