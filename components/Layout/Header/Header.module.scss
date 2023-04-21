@@ -81,7 +81,7 @@
       width: 100%;
       height: calc(100vh - 80px);
       transform: translateX(-100%);
-      transition: .5s;
+    //   transition: .5s;
       .ul {
         display: flex;
         flex-direction: column;
@@ -93,6 +93,7 @@
       }
       &.mobileMenuOpen {
         transform: translateX(0%);
+        transition: .5s;
       }
     }
   }
