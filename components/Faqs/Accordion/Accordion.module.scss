@@ -1,0 +1,39 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.faqWrapper {
+  margin-bottom: 20px;
+  border-radius: 7px;
+  border-radius: 5px;
+  overflow: hidden;
+  .faqQuestionWrapper {
+    background-color: rgba(243, 243, 243, .5);
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    h3 {
+      font-family: $ysabeau;
+      opacity: 0.8;
+      font-size: 16px;
+    }
+  }
+  .awnser {
+    padding: 20px;
+    background-color: rgba(250, 250, 250, .5);
+    p{
+        font-family: $ysabeau;
+        opacity: 0.8;
+        font-size: 14px;
+    }
+    ol {
+      li {
+        margin: 30px 20px;
+        font-family: $ysabeau;
+        opacity: 0.8;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -20,6 +20,12 @@
   }
 }
 
+@mixin tablet-mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media (min-width: 768px) and (max-width: 992px) {
     @content;

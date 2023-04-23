@@ -4,14 +4,18 @@ import filter from "@/utils/filter";
 import Layout from "@/components/Layout/Layout";
 
 export default function Home({ modules }) {
+ 
   return (
     <>
-      <Layout>{modules.map((module, i) => filter(module, i))}</Layout>
+      <Layout>
+        {modules.map((module, i) => filter(module, i))}
+      </Layout>
     </>
   );
 }
 
 export async function getStaticProps() {
+
   const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
   const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
 
@@ -28,11 +32,15 @@ export async function getStaticProps() {
       }),
     }
   );
+
   const {
-    data: {
-      heroSectionCollection: { items: modules },
-    },
+    data: data
   } = await res.json();
+console.log(data)
+  const keysArray = Object.keys(data);
+  const modules = keysArray.map(key => data[key]);
+
+ console.log(modules)
   return {
     props: {
       modules,

@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+.faqContainer {
+  width: 100%;
+  height: min-content;
+  height: 100%;
+
+  margin-top: 150px;
+  .faqWrapper {
+    padding: 5% 10%;
+    display: flex;
+    width: 100%;
+
+    .aside {
+      flex-basis: 25%;
+      margin-right: 50px;
+      order: 1;
+      p {
+        font-family: $ysabeau;
+        opacity: 0.8;
+        font-size: 16px;
+        a {
+          text-decoration: none;
+          opacity: 0.8;
+        }
+      }
+    }
+    .faqs {
+      width: 50%;
+      order: 2;
+      .accordionHeadline {
+        width: 100%;
+        background-color: rgb(250, 250, 250);
+        margin-bottom: 20px;
+        padding: 15px;
+
+        summary {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    @include tablet-mobile {
+      flex-direction: column;
+      .aside {
+        order: 2;
+        margin-top: 50px;
+      }
+      .faqs {
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+}
