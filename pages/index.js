@@ -1,4 +1,4 @@
-import { Get_Hero } from "@/lib/queries";
+import { Get_IndexPage } from "@/lib/queries";
 import filter from "@/utils/filter";
 
 import Layout from "@/components/Layout/Layout";
@@ -28,7 +28,7 @@ export async function getStaticProps() {
         authorization: `Bearer ${accessToken}`,
       },
       body: JSON.stringify({
-        query: Get_Hero(),
+        query: Get_IndexPage(),
       }),
     }
   );
@@ -36,11 +36,9 @@ export async function getStaticProps() {
   const {
     data: data
   } = await res.json();
-console.log(data)
   const keysArray = Object.keys(data);
   const modules = keysArray.map(key => data[key]);
 
- console.log(modules)
   return {
     props: {
       modules,
