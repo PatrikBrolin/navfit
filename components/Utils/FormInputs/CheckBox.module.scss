@@ -1,0 +1,22 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.inputContainer {
+  label {
+    border: 1px solid $accentColor;
+    background-color: transparent;
+    padding: 15px;
+    cursor: pointer;
+    font-family: $ysabeau;
+    border-radius: 5px;
+    color: rgba(20,20,20, .8)
+    ;
+    &.checked{
+        background-color: $accentColor;
+        color: white;
+    }
+  }
+  input {
+    display: none;
+  }
+}

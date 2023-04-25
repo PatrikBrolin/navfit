@@ -2,6 +2,7 @@ import { Get_IndexPage } from "@/lib/queries";
 import filter from "@/utils/filter";
 
 import Layout from "@/components/Layout/Layout";
+import Contact from "@/components/Index/Contact/Contact";
 
 export default function Home({ modules }) {
  
@@ -9,6 +10,7 @@ export default function Home({ modules }) {
     <>
       <Layout>
         {modules.map((module, i) => filter(module, i))}
+        <Contact />
       </Layout>
     </>
   );

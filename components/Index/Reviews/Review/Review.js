@@ -2,7 +2,6 @@ import styles from "./Review.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default function Review({ data }) {
-  console.log(data);
   return (
     <li className={styles.review}>
     <div className={styles.reviewWrapper} >

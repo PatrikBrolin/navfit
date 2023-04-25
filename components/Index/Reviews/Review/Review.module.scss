@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
-@import "../../../styles/variables";
-@import "../../../styles/mixins";
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
 
 .review {
   position: relative;
@@ -79,31 +79,22 @@
       position: absolute;
       top: -25px;
       left: -25px;
-      content: url('../../../public/icons/quote.png');
-      font-size: 20px;
-
-
+      content: url("../../../../public/icons/quote.png");
       border: 2px solid rgb(247, 152, 43);
       background: #2bc0ff;
       display: flex;
       justify-content: center;
       align-items: center;
-      // font-size: 30px;
       width: 50px;
       height: 50px;
-
-
-      color: white;
     }
     &::after {
       position: absolute;
       bottom: -25px;
       right: -25px;
-      content: url('../../../public/icons/quote.png');
- 
+      content: url("../../../../public/icons/quote.png");
       border: 2px solid rgb(247, 152, 43);
       background: #2bc0ff;
-
       width: 50px;
       height: 50px;
       display: flex;

@@ -2,7 +2,7 @@ import Hero from "@/components/Hero/Hero";
 import About from "@/components/About/About";
 import Faqs from "@/components/Faqs/Faqs";
 import Contact from "@/components/Contact/Contact";
-import Reviews from "@/components/Reviews/Reviews";
+import Reviews from "@/components/Index/Reviews/Reviews";
 
 const filter = (module, key, component) => {
 
