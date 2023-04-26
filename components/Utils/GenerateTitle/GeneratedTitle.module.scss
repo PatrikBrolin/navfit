@@ -1,38 +1,45 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .headerContainer {
-    margin-bottom: 2.5em;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    z-index: 1;
-    position: relative;
+  width: 100%;
 
-    @include mobile {
-        margin-bottom: 1.3em;
+  z-index: 1;
+  position: relative;
+
+  .header {
+    margin: 0;
+    text-align: left;
+    font-family: $headline;
+    color: white;
+    @include headlineFontSize;
+    span {
+      font-family: $headline;
+      color: white;
+      @include headlineFontSize;
+      position: relative;
+      @media (max-width: 768px) {
+        font-size: 40px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 95%;
+        background-color: $accentColor;
+        left: 0;
+        bottom: 35%
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 95%;
+        background-color: $accentColor;
+        left: 0;
+        bottom: 45%;
+    
+      }
     }
-
-    .header {
-        margin: 0;
-        text-align: left;
-        font-family: $ysabeau;
-        color: white;
-
-        span {
-            font-family: $ysabeau;
-            color: white;
-            font-size: 40px;
-
-            @include mobile {
-                font-size: 29px;
-                line-height: 34px;
-            }
-        }
-
-        @include mobile {
-            font-size: 29px;
-            line-height: 34px;
-        }
-    }
+  }
 }

@@ -54,13 +54,14 @@
     z-index: 1;
     margin: auto 0;
 
-    h2 {
-      @include headlineFontSize;
-      font-family: $headline;
-    }
+    // h2 {
+    //   @include headlineFontSize;
+    //   font-family: $headline;
+    // }
     p {
       font-size: 30px;
       font-family: $ysabeau;
+      margin: 20px 0;
     }
 
     .button {

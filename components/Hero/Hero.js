@@ -9,8 +9,9 @@ export default function Hero({ data }) {
         className={styles.heroImg}
       />
       <div className={styles.textContent}>
-        <h2>{data?.items[0]?.rubrik}</h2>
-        <GeneratedTitle headline={data?.items[0]?.undertext}/>
+        {/* <h2>{data?.items[0]?.rubrik}</h2> */}
+        <GeneratedTitle headline={data?.items[0]?.rubrik}/>
+        <p>{data?.items[0]?.undertext}</p>
         <button className={styles.button}>
           <div className={cn(styles.buttonDesign)}>
             <img src="./icons/caret.png" />
