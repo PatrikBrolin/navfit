@@ -42,9 +42,7 @@ export default function Header() {
           <li>
             <Link href="/hur-det-fungerar">Hur det fungerar</Link>
           </li>
-          <li>
-            <Link href="/resultat">Resultat</Link>
-          </li>
+       
           <li>
             <Link href="/faq">FAQ</Link>
           </li>

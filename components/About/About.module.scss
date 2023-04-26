@@ -1,0 +1,85 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.aboutContainer {
+  margin-top: 80px;
+  padding: 5% 10%;
+  * {
+    font-family: $ysabeau;
+  }
+  display: flex;
+
+  main {
+    // width: 70%;
+    flex-basis: 60%;
+    section {
+      margin: 50px 0;
+      position: relative;
+
+      h3 {
+        margin-bottom: 20px;
+        opacity: 0.8;
+        font-size: 22px;
+        position: relative;
+        width: min-content;
+
+        &::after {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $bgColor;
+          bottom: -5px;
+          left: 0;
+          opacity: 0.1;
+        }
+      }
+      ul {
+        list-style: none;
+        margin: 20px 0;
+        li {
+          margin-top: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    .education {
+    }
+    .aboutText {
+      p {
+        width: 100%;
+        line-height: 2;
+      }
+    }
+    @include tablet-mobile{
+        width: 100%;
+        flex-basis: 100%;
+    }
+  }
+  .imageContainer {
+    flex-basis: 40%;
+    margin-left: 100px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: white;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: 1;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background: radial-gradient(circle, rgba(249,249,249,0) 0%, rgba(255,255,255,1) 95%);
+        z-index: 2;
+    }
+    @include tablet-mobile{
+        display: none;
+    }
+  }
+}
