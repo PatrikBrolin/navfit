@@ -8,7 +8,6 @@
   display: flex;
   background-color: black;
   margin-top: 80px;
-  
 
   .heroImg {
     height: 100%;
@@ -22,35 +21,89 @@
       left: 0;
       height: 100%;
       width: 100%;
+      &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        z-index: 2;
+      }
     }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: $bgColor, $alpha: 0.7);
+    z-index: 2;
+    left: 0;
+    top: 0;
+    z-index: 0;
   }
 
   .textContent {
-    display: flex;
+    // display: flex;
     flex-direction: column;
     color: white;
     // align-items: center;
     justify-content: center;
     flex-basis: 55%;
     padding-left: 6%;
-    @media (max-width: 768px) {
-      z-index: 1;
-    }
+    z-index: 1;
+    margin: auto 0;
+
     h2 {
       @include headlineFontSize;
       font-family: $headline;
     }
     p {
       font-size: 30px;
+      font-family: $ysabeau;
     }
 
-    button {
-      border: 1px solid white;
-      background: transparent;
-      padding: 15px 35px;
-      width: min-content;
+    .button {
+      margin-top: 30px;
+      border: 1px solid rgba(230, 230, 230);
+      background:transparent;
+      padding: 15px 90px;
+      border-radius: 7px;
+      font-family: $ysabeau;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
       color: white;
-      white-space: nowrap;
+      .buttonDesign {
+        height: 100%;
+        width: 55px;
+        content: "";
+        position: absolute;
+        background:transparent;
+       
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgba(230, 230, 230);
+        img {
+          height: 30px;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      z-index: 1;
+      flex-basis: 100%;
+      h2 {
+        font-size: 40px;
+        white-space: nowrap;
+      }
+      p {
+        width: 90%;
+        margin: 20px 0;
+      }
     }
   }
 }
