@@ -14,7 +14,6 @@ export default function Layout({ children, pageMeta }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-        <html lang="sv"/>
       </Head>
       <Header />
       {children}
