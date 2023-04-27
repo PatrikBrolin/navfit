@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-sitemap": "next-sitemap"
   },
   "dependencies": {
     "@apollo/client": "^3.7.12",
@@ -25,5 +26,8 @@
     "react-dom": "18.2.0",
     "react-leaflet": "^4.2.1",
     "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "next-sitemap": "^4.0.7"
   }
 }

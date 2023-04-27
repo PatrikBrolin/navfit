@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://navfit.vercel.app
+
+# Sitemaps
+Sitemap: https://navfit.vercel.app/sitemap.xml
