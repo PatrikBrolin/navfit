@@ -12,6 +12,7 @@ const Map = () => {
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
   });
+  
   return (
     <MapContainer
       center={[59.20188, 17.7671]}

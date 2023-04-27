@@ -78,7 +78,6 @@
     @include tablet {
       position: absolute;
       top: 80px;
-      // background-color: rgba($color: $bgColor, $alpha: 1);
       left: 0;
       width: 100%;
       height: calc(100vh - 80px);
@@ -202,7 +201,6 @@
   &.mobileMenuOpen {
     @media (max-width: 768px) {
       z-index: 9999;
-      // background-color: rgba($color: $bgColor, $alpha: 1);
       .nav {
         .ul {
           li {
@@ -249,17 +247,6 @@
           }
         }
       }
-    }
-  }
-
-  @include tablet {
-    &.mobileMenuOpen {
-      // background-color: rgba($color: $bgColor, $alpha: 1);
-    }
-  }
-  @include mobile {
-    &.mobileMenuOpen {
-      // background-color: rgba($color: $bgColor, $alpha: 1);
     }
   }
 }

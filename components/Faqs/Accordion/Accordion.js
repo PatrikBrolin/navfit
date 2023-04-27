@@ -6,9 +6,7 @@ import Image from "next/image";
 export default function Accordion({ question, awnser }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
-  // useEffect(() => {
-  //   setAccordionOpen(false);
-  // }, []);
+
 
   return (
     <div className={styles.faqWrapper}>

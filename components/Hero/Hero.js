@@ -1,6 +1,7 @@
 import styles from "./Hero.module.scss";
 import cn from "classnames";
 import GeneratedTitle from "../Utils/GenerateTitle/GeneratedTitle";
+import Image from "next/image";
 export default function Hero({ data }) {
   return (
     <section className={styles.heroWrapper}>
@@ -15,8 +16,7 @@ export default function Hero({ data }) {
         <p>{data?.items[0]?.undertext}</p>
         <button className={styles.button}>
           <div className={cn(styles.buttonDesign)}>
-            <img src="./icons/caret.png" alt="Triangel icon"/>
-            
+            <Image src="/icons/caret.png" alt="Triangel icon" height={30} width={30}/>
           </div>
           {data?.items[0]?.callToActionKnapp}
         </button>

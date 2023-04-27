@@ -6,31 +6,37 @@
   width: 100%;
   display: flex;
   padding: 5% 5%;
-  background:black;
+  background: black;
   position: relative;
   justify-content: center;
   align-items: center;
-  @include tablet-mobile{
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .3));
+    z-index: 1;
+  }
+  @include tablet-mobile {
     padding: 0%;
-    background:black;
-}
+    background: black;
+  }
   .img {
     width: 60%;
     height: 70vh;
     object-fit: cover;
     flex-basis: 60%;
- 
-    @include tablet-mobile{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-
+    position: relative;
+    @include tablet-mobile {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
     }
   }
   .textSection {
-
     position: relative;
     flex-basis: 40%;
     display: flex;
@@ -39,77 +45,80 @@
 
     height: 100%;
     width: 100%;
-    @include tablet-mobile{
-        flex-basis: 100%;
-        height: min-content;
+    z-index: 1;
+    @include tablet-mobile {
+      flex-basis: 100%;
+      height: min-content;
     }
-    .aside{
-        position: absolute;
-        background-color: white;
-        height: min-content;
-        width: 130%;
-        right: 0;
-        top: 30%;
+    .aside {
+      position: absolute;
+      background-color: white;
+      height: min-content;
+      width: 130%;
+      right: 0;
+      top: 30%;
+      padding: 5%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      border-radius: 5px;
+      flex-direction: column;
+      @include tablet-mobile {
+        width: 95%;
+        right: auto;
+        top: auto;
         padding: 5%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        border-radius: 5px;
-        flex-direction: column;
-        @include tablet-mobile{
-            width: 95%;
-            right: auto;
-            top: auto;
-            padding: 5%;
-        }
-        p{
-            font-family: $ysabeau;
-            font-size: 18px;
-            line-height: 1.6;
-            opacity: .7;
-        }
-        .button{
-            margin-top: 30px;
-            border: 1px solid rgba(230, 230, 230, );
-            background-color: transparent;
-            padding: 15px 90px;
-            border-radius: 7px;
-            font-family: $ysabeau;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            .buttonDesign{
-                height: 100%;
-                width: 55px;
-                content: "";
-                position: absolute;
-                background: rgb(247,152,43);
-                background: linear-gradient(0deg, rgba(247,152,43,1) 0%, rgba(247,197,43,1) 100%);
-                left: 0;
-                top: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    height: 30px;
-                    transform: rotate(-90deg);
-                    
-                }
-            }
+      }
+      p {
+        font-family: $ysabeau;
+        font-size: 18px;
+        line-height: 1.6;
+        opacity: 0.7;
+      }
+      .button {
+        margin-top: 30px;
+        border: 1px solid rgba(230, 230, 230);
+        background-color: transparent;
+        padding: 15px 90px;
+        border-radius: 7px;
+        font-family: $ysabeau;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        .buttonDesign {
+          height: 100%;
+          width: 55px;
+          content: "";
+          position: absolute;
+          background: rgb(247, 152, 43);
+          background: linear-gradient(
+            0deg,
+            rgba(247, 152, 43, 1) 0%,
+            rgba(247, 197, 43, 1) 100%
+          );
+          left: 0;
+          top: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 30px;
+            transform: rotate(-90deg);
           }
-        
-        &::after{
-            position: absolute;
-            content: "";
-            height: calc(100% - 20px);
-            width: calc(100% - 20px);
-            left: 8px;
-            border: 2px solid $accentColor;
-            border-radius: 5px;
-            z-index: 0;
-            pointer-events: none;
         }
+      }
 
+      &::after {
+        position: absolute;
+        content: "";
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        left: 8px;
+        border: 2px solid $accentColor;
+        border-radius: 5px;
+        z-index: 0;
+        pointer-events: none;
+      }
     }
   }
 }
