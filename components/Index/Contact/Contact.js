@@ -4,6 +4,7 @@ import CheckBox from "@/components/Utils/FormInputs/CheckBox";
 import { useState, useRef } from "react";
 import cn from "classnames";
 import emailjs from "emailjs-com";
+import Image from "next/image";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -175,7 +176,12 @@ export default function Contact() {
           <div
             className={cn(styles.buttonDesign, loading && styles.buttonLoading)}
           >
-            <img src="./icons/caret.png" alt="Triangle ikon" />
+            <Image
+              src="/icons/caret.png"
+              alt="Triangel ikon"
+              height={30}
+              width={30}
+            />
           </div>
           Skicka
         </button>
