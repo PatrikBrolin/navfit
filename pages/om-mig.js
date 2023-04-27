@@ -5,7 +5,11 @@ import filter from "@/utils/filter";
 export default function About({modules}) {
   return (
     <>
-      <Layout>{modules?.map((module, i) => filter(module, i))}</Layout>
+      <Layout  pageMeta={{
+          title: "Marcel Navarro - Licensierad personlig tränare",
+          description:
+            "Personliga tränaren Marcel Navarro. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
+        }}>{modules?.map((module, i) => filter(module, i))}</Layout>
     </>
   );
 }
