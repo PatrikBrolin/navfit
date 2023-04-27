@@ -7,8 +7,8 @@ export default function Layout({ children, pageMeta }) {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>{pageMeta.title}</title>
-        <meta name="description" content={pageMeta.description} />
+        <title>{pageMeta?.title}</title>
+        <meta name="description" content={pageMeta?.description} />
         <meta charSet="utf-8" />
         <meta
           name="viewport"
