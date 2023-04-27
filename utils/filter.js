@@ -4,8 +4,10 @@ import Faqs from "@/components/Faqs/Faqs";
 import Contact from "@/components/Contact/Contact";
 import Reviews from "@/components/Index/Reviews/Reviews";
 import ShortIntroduction from "@/components/Index/About/About";
+import Booking from "@/components/Booking/Booking";
 
 const filter = (module, key, component) => {
+
   switch (module.items[0].modulTyp) {
     case "Hero":
       return <Hero key={key} data={module} />;
@@ -19,6 +21,8 @@ const filter = (module, key, component) => {
       return <Reviews key={key} data={module} />;
     case "Short-introduction":
       return <ShortIntroduction key={key} data={module} />;
+    case "Hur-det-går-till":
+      return <Booking key={key} data={module} />
     default:
       break;
   }
