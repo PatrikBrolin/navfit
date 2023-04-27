@@ -9,7 +9,7 @@ export default function Footer() {
         </h2>
         <div className={styles.socialMediaContainer}>
           <a href="https://www.instagram.com" target="_blank" aria-label="Länk till instagram">
-            <img src="./brand-icons/instagram-white.png" alt="Instragram ikon"/>
+            <img src="./brand-icons/instagram.webp" alt="Instragram ikon"/>
           </a>
         </div>
       </div>
