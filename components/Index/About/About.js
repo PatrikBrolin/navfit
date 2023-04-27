@@ -2,6 +2,7 @@ import styles from "./About.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useRouter } from "next/router";
 import cn from "classnames";
+import Image from "next/image";
 
 export default function ShortIntroduction({ data }) {
   const router = useRouter();
@@ -17,7 +18,8 @@ export default function ShortIntroduction({ data }) {
           {documentToReactComponents(data?.items[0]?.kortIntroduktion?.json)}
           <button className={styles.button} onClick={redirect} aria-label="Kontakta mig knapp">
             <div className={cn(styles.buttonDesign)}>
-              <img src="./icons/caret.png" alt="Triangel ikon"/>
+              <Image src="/icons/caret.png" alt="Triangel ikon" height={30} width={30}/>
+   
             </div>
             Läs mer
           </button>

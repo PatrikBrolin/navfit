@@ -5,6 +5,7 @@ import { ValidateEmail } from "@/lib/helpFunctions";
 import cn from "classnames";
 import FormInput from "@/components/Utils/FormInputs/FormInput";
 import TextAreaInput from "@/components/Utils/FormInputs/TextAreaInput";
+import Image from "next/image";
 
 export default function EmailForm() {
   const [formData, setFormData] = useState({
@@ -106,17 +107,27 @@ export default function EmailForm() {
           error={messageError}
           errorText="Skriv ett meddelande"
         />
-        <button className={styles.button}>
+        <button className={styles.button} aria-label="Skicka meddelande knapp">
           <div
             className={cn(styles.buttonDesign, loading && styles.buttonLoading)}
           >
-            <img src="./icons/caret.png" />
+            <Image
+              src="/icons/caret.png"
+              alt="Triangel icon"
+              height={30}
+              width={30}
+            />
           </div>
           Skicka
         </button>
         {formError && (
           <div className={styles.formErrorContainer}>
-            <img src="./icons/error.png" />{" "}
+            <Image
+              src="/icons/error.png"
+              alt="Error meddelande ikon"
+              height={20}
+              width={20}
+            />
             <p>
               Ursäkta, något gick fel vid skickandet av meddelandet. Försökt
               gärna igen!{" "}
