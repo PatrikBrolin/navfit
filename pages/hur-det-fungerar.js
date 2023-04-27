@@ -1,14 +1,15 @@
-
 import Layout from "@/components/Layout/Layout";
 
 export default function HowItWorks() {
   return (
     <>
-      <Layout  pageMeta={{
-          title: "Marcel Navarro - Licensierad personlig tränare",
+      <Layout
+        pageMeta={{
+          title: "Hur fungerar processen vid bokning av Marcel Navarro | Navfit",
           description:
-            "Personliga tränaren Marcel Navarro. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
-        }}></Layout>
+            "Steg för steg genomgång för hur processen går tillvid bokning av träning eller kostrådgivning av Marcel Navarro",
+        }}
+      ></Layout>
     </>
   );
 }

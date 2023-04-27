@@ -7,9 +7,9 @@ export default function Faqs({ modules }) {
     <>
       <Layout
         pageMeta={{
-          title: "Marcel Navarro - Licensierad personlig tränare",
+          title: "Vanliga frågor och svar | Navfit",
           description:
-            "Personliga tränaren Marcel Navarro. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
+            "Här hittar du bra information om vad en personlig tränare kan hjälpa dig med och vad du ska tänka på innan du bokar en personlig tränare ",
         }}
       >
         {modules?.map((module, i) => filter(module, i))}

@@ -11,7 +11,7 @@ export default function Home({ modules }) {
     <>
       <Layout
         pageMeta={{
-          title: "Marcel Navarro - Licensierad personlig tränare",
+          title: "Marcel Navarro - Licensierad personlig tränare | Navfit",
           description:
             "Personliga tränaren Marcel Navarro. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
         }}

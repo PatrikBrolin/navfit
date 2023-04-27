@@ -2,16 +2,18 @@ import Layout from "@/components/Layout/Layout";
 import { Get_ContactPage } from "@/lib/queries";
 import filter from "@/utils/filter";
 
-
 export default function Contact({ modules }) {
   return (
     <>
-   
-      <Layout  pageMeta={{
-          title: "Marcel Navarro - Licensierad personlig tränare",
+      <Layout
+        pageMeta={{
+          title: "Kontakta mig | Navfit",
           description:
-            "Personliga tränaren Marcel Navarro. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
-        }}>{modules?.map((module, i) => filter(module, i))}</Layout>
+            "Kontakta Navfit för frågor eller bokning. Jag är här för att hjälpa dig och svara på dina frågpr. Fyll i formulärer eller använd kontaktinformationen för att nå mig direkt. ",
+        }}
+      >
+        {modules?.map((module, i) => filter(module, i))}
+      </Layout>
     </>
   );
 }
