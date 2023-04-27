@@ -4,11 +4,11 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useEffect } from "react";
 import Image from "next/image";
 export default function Accordion({ question, awnser }) {
-  const [accordionOpen, setAccordionOpen] = useState(true);
+  const [accordionOpen, setAccordionOpen] = useState(false);
 
-  useEffect(() => {
-    setAccordionOpen(false);
-  }, []);
+  // useEffect(() => {
+  //   setAccordionOpen(false);
+  // }, []);
 
   return (
     <div className={styles.faqWrapper}>
