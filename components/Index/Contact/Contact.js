@@ -80,11 +80,11 @@ export default function Contact() {
             setLoading(false);
             setFormData({ name: "", phonenumber: "" });
             setTrainingType({
-                personligträning: false,
-                kostrådgivning: false,
-                kampsport: false,
-                annat: false,
-            })
+              personligträning: false,
+              kostrådgivning: false,
+              kampsport: false,
+              annat: false,
+            });
             console.log(result);
           },
           (error) => {
@@ -144,7 +144,8 @@ export default function Contact() {
           </ul>
           {typeError && (
             <div className={styles.errorContainer}>
-              <img src="./icons/error.png" /> <p>Vänligen välj någon typ</p>
+              <img src="./icons/error.png" alt="Ikon som indikerar ett error" />{" "}
+              <p>Vänligen välj någon typ</p>
             </div>
           )}
         </fieldset>
@@ -170,11 +171,11 @@ export default function Contact() {
           error={phoneError}
           errorText="Fyll i ditt telefonnummer"
         />
-        <button className={styles.button}>
+        <button className={styles.button} aria-label="Kontakta mig knapp">
           <div
             className={cn(styles.buttonDesign, loading && styles.buttonLoading)}
           >
-            <img src="./icons/caret.png" />
+            <img src="./icons/caret.png" alt="Triangle ikon" />
           </div>
           Skicka
         </button>

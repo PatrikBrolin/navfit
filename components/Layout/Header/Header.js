@@ -59,6 +59,8 @@ export default function Header() {
           isScrolled && styles.isScrolled
         )}
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        name="mobile-menu-button"
+        aria-label="mobile-menu-button"
       >
         <span></span>
         <span></span>

@@ -6,6 +6,7 @@ export default function Hero({ data }) {
     <section className={styles.heroWrapper}>
       <img
         src={data?.items[0]?.backgrundsbild.url}
+        alt={data?.items[0]?.bildText}
         className={styles.heroImg}
       />
       <div className={styles.textContent}>
@@ -14,7 +15,8 @@ export default function Hero({ data }) {
         <p>{data?.items[0]?.undertext}</p>
         <button className={styles.button}>
           <div className={cn(styles.buttonDesign)}>
-            <img src="./icons/caret.png" />
+            <img src="./icons/caret.png" alt="Triangel icon"/>
+            
           </div>
           {data?.items[0]?.callToActionKnapp}
         </button>

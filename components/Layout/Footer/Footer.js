@@ -8,9 +8,8 @@ export default function Footer() {
           <Link href="/">Navfit</Link>
         </h2>
         <div className={styles.socialMediaContainer}>
-          <a href="https://www.instagram.com" target="_blank">
-            
-            <img src="./brand-icons/instagram-white.png" />
+          <a href="https://www.instagram.com" target="_blank" aria-label="Länk till instagram">
+            <img src="./brand-icons/instagram-white.png" alt="Instragram ikon"/>
           </a>
         </div>
       </div>
