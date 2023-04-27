@@ -7,6 +7,7 @@ export default function Hero({ data }) {
     <section className={styles.heroWrapper}>
       <div className={styles.imageContainer}>
         <Image
+        loading="eager"
           src={data?.items[0]?.backgrundsbild.url}
           alt={data?.items[0]?.bildText}
           width={100}
@@ -14,11 +15,7 @@ export default function Hero({ data }) {
           layout="responsive"
         />
       </div>
-      {/* <img
-        src={data?.items[0]?.backgrundsbild.url}
-        alt={data?.items[0]?.bildText}
-        className={styles.heroImg}
-      /> */}
+  
       <div className={styles.textContent}>
         {/* <h2>{data?.items[0]?.rubrik}</h2> */}
         <GeneratedTitle headline={data?.items[0]?.rubrik} />
