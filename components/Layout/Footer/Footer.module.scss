@@ -10,38 +10,59 @@
   padding: 0;
   margin: 0;
   display: flex;
-
+justify-content: space-between;
   padding: 5% 10%;
-    align-items: end;
-
+  align-items: start;
+@include tablet-mobile{
+  flex-direction: column;
+}
   .logoContainer {
     display: flex;
     flex-direction: column;
-
-    flex-basis: 50%;
+    align-items: flex-start;
+    flex-basis: 100%;
+    @include tablet-mobile{
+    margin-bottom: 50px;
+    }
     h2 {
-    
-      a{
+      a {
         text-decoration: none;
         font-family: $headline;
         color: white;
         flex-basis: 20%;
-        font-size: 26px;
+        font-size: 30px;
       }
     }
-    .socialMediaContainer{
-        display: flex;
+  }
+  .socialMediaLinks {
+    flex-basis: 70%;
+    display: flex;
+    @include tablet-mobile{
+      margin-bottom: 50px;
+      }
+    ul{
+      list-style: none;
+      h3 {
+        color: white;
+        white-space: nowrap;
+        font-family: $ysabeau;
+        
+      }
+
+      li{
         margin-top: 20px;
+      }
       
     }
+    
   }
   .copywrite {
-    flex-basis: 50%;
-
+    flex-basis: 70%;
+    text-align: end;
     p {
       color: white;
       font-family: $roboto;
-      font-size: 16px;
+      font-size: 14px;
       margin-top: 10px;
     }
   }

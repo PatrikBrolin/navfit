@@ -6,7 +6,7 @@ import cn from "classnames";
 import emailjs from "emailjs-com";
 import Image from "next/image";
 
-export default function Contact() {
+export default function Contact({ showText, extraPadding }) {
   const [loading, setLoading] = useState(false);
   const [nameError, setNameError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
@@ -97,15 +97,17 @@ export default function Contact() {
     }
   };
   return (
-    <section className={styles.contact}>
-      <div className={styles.textContainer}>
-        <h2>Vill du boka tid?</h2>
-        <p>
-          Är du intresserad av att boka tid eller har några andra frågor? Fyll i
-          dina uppgifter och vad du är intresserad av för upplägg så hör jag av
-          mig så fort jag kan.
-        </p>
-      </div>
+    <section className={cn(styles.contact, extraPadding && styles.extraPadding) }>
+      {showText && (
+        <div className={styles.textContainer}>
+          <h2>Vill du boka tid?</h2>
+          <p>
+            Är du intresserad av att boka tid eller har några andra frågor? Fyll
+            i dina uppgifter och vad du är intresserad av för upplägg så hör jag
+            av mig så fort jag kan.
+          </p>
+        </div>
+      )}
 
       <form className={styles.form} onSubmit={handleSubmit}>
         <fieldset className={styles.checkboxes}>

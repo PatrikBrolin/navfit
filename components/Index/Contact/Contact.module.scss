@@ -2,12 +2,15 @@
 @import "../../../styles/variables";
 
 .contact {
-  padding: 5% 10%;
+ 
   display: flex;
   margin-bottom: 50px;
+  &.extraPadding{
+    padding: 5% 10%;
+  }
 
   .textContainer {
-    flex-basis: 50%;
+    flex-basis: 100%;
     @include tablet-mobile {
       margin-bottom: 60px;
     }
@@ -29,7 +32,7 @@
     }
   }
   .form {
-    flex-basis: 50%;
+    flex-basis: 100%;
     margin-top: 30px;
     .checkboxes {
       border: none;

@@ -2,12 +2,18 @@ import styles from "./Header.module.scss";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import cn from "classnames";
 
 export default function Header() {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+
+  const redirect = () => {
+    router.push("/kontakt");
+  };
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 0) {
@@ -49,7 +55,11 @@ export default function Header() {
           <li>
             <Link href="/kontakt">Kontakt</Link>
           </li>
+          <li>
+          <button onClick={redirect}>Kom igång</button>
+          </li>
         </ul>
+       
       </nav>
 
       <button

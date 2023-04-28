@@ -17,7 +17,7 @@ export default function Home({ modules }) {
         }}
       >
         {modules.map((module, i) => filter(module, i))}
-        <Contact />
+        <Contact showText={true} extraPadding={true}/>
       </Layout>
     </>
   );

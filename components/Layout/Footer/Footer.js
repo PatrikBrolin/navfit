@@ -8,15 +8,19 @@ export default function Footer() {
         <h2>
           <Link href="/">Navfit</Link>
         </h2>
-        <div className={styles.socialMediaContainer}>
+      </div>
+      <div className={styles.socialMediaLinks}>
+        <ul>
+          <h3>Sociala medier</h3>
+        <li className={styles.link}>
           <a href="https://www.instagram.com" target="_blank" aria-label="Länk till instagram">
             <Image src="/brand-icons/instagram.webp" alt="Instragram ikon" height={25} width={25}/>
           </a>
-        </div>
+        </li>
+        </ul>
       </div>
       <div className={styles.copywrite}>
-        <p> Copyright © Patrik Brolin</p>
-       
+        <p> Copyright © Navfit</p>
       </div>
     </footer>
   );
