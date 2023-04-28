@@ -15,7 +15,7 @@ export default function About({ data }) {
         {documentToReactComponents(data?.items[0]?.paragrafText?.json)}
       </section>
       <section className={styles.certificates}>
-        <h2>Certifikat:</h2>h2
+        <h2>Certifikat:</h2>
         {documentToReactComponents(data?.items[0]?.certifikat?.json)}
       </section>
       </main>
