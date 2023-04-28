@@ -44,10 +44,12 @@
     padding-left: 6%;
     z-index: 1;
     margin: auto 0;
+    align-items: start;
     p {
       font-size: 30px;
       font-family: $ysabeau;
-      margin: 20px 0;
+      margin: 20px 0 ;
+      width: 80%;
     }
 
     .button {
