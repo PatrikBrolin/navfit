@@ -82,6 +82,11 @@
           padding: 15px 25px;
           color: white;
           background-color: $accentColor;
+          background: linear-gradient(
+            0deg,
+            rgba(247, 152, 43, 1) 0%,
+            rgba(247, 197, 43, 1) 100%
+          );
           border-radius: 7px;
           border: none;
           cursor: pointer;
@@ -96,6 +101,11 @@
             width: 100%;
             height: 100%;
             background-color: #2bc0ff;
+            background: linear-gradient(
+              0deg,
+              #16b9ff 0%,
+              #5dceff 100%
+            );
             transition: left 0.3s ease-out;
             z-index: -1;
           }
