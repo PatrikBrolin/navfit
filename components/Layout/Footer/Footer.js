@@ -10,8 +10,9 @@ export default function Footer() {
         </h2>
       </div>
       <div className={styles.socialMediaLinks}>
+      <h3>Sociala medier</h3>
         <ul>
-          <h3>Sociala medier</h3>
+          
         <li className={styles.link}>
           <a href="https://www.instagram.com" target="_blank" aria-label="Länk till instagram">
             <Image src="/brand-icons/instagram.webp" alt="Instragram ikon" height={25} width={25}/>

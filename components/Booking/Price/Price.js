@@ -7,7 +7,7 @@ export default function Price({ data }) {
         {data?.items?.map((item, i) => {
           return (
             <li key={i}>
-              <h3>{item?.kategori}:</h3> <p>{item?.kostnad}</p>
+              <h2>{item?.kategori}:</h2> <p>{item?.kostnad}</p>
             </li>
           );
         })}
