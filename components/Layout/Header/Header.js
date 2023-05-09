@@ -56,7 +56,7 @@ export default function Header() {
             <Link href="/kontakt">Kontakt</Link>
           </li>
           <li>
-          <button onClick={redirect}>Kom igång</button>
+          <Link href="/kontakt" className={styles.buttonLink}><div className={styles.button}>Kom igång</div></Link>
           </li>
         </ul>
        
