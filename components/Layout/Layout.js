@@ -15,6 +15,12 @@ export default function Layout({ children, pageMeta }) {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(pageMeta?.structuredData),
+          }}
+        />
       </Head>
       <Header />
       {children}
