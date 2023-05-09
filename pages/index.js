@@ -52,14 +52,6 @@ export async function getStaticProps() {
     name: "Marcel Navarro",
     url: "https://navfit.vercel.app/",
     image: data?.heroSectionCollection?.items[0]?.backgrundsbild?.url,
-    review: data?.recensionCollection?.items?.map((review) => ({
-      "@type": "Review",
-      reviewBody: review?.recensionText,
-      author: {
-        "@type": "Person",
-        name: review?.namn,
-      },
-    })),
     about:
       "Jag är en certifierad PT som hjälper dig att nå dina träningsmål genom skräddarsydda träningsprogram och individuell coaching. Tillsammans hjälper jag dig att nå dina fysiska mål.",
   };
