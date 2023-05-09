@@ -43,7 +43,6 @@ export async function getStaticProps() {
   );
 
   const { data: data } = await res.json();
-  console.log(data?.recensionCollection?.items);
   const keysArray = Object.keys(data);
   const modules = keysArray.map((key) => data[key]);
 
