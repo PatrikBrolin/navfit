@@ -8,6 +8,7 @@ export default function Layout({ children, pageMeta }) {
     <div className={styles.layout}>
       <Head>
         <title>{pageMeta?.title}</title>
+        <meta name="google-site-verification" content="MFQoOZW_3tJvT2ujBzbQf1LlQm4AiYB3YqmIoWqM5Qs" />
         <meta name="description" content={pageMeta?.description} />
         <meta charSet="utf-8" />
         <meta

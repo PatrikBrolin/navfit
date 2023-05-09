@@ -7,7 +7,7 @@ import ShortIntroduction from "@/components/Index/About/About";
 import Booking from "@/components/Booking/Booking";
 import Price from "@/components/Booking/Price/Price";
 
-const filter = (module, key, component) => {
+const filter = (module, key) => {
   switch (module.items[0].modulTyp) {
     case "Hero":
       return <Hero key={key} data={module} />;

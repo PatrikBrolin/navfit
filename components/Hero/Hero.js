@@ -26,14 +26,14 @@ export default function Hero({ data }) {
         <GeneratedTitle headline={data?.items[0]?.rubrik} />
         <p>{data?.items[0]?.undertext}</p>
         <button className={styles.button} onClick={redirect}>
-          <div className={cn(styles.buttonDesign)}>
+          <span className={cn(styles.buttonDesign)}>
             <Image
               src="/icons/caret.png"
               alt="Triangel icon"
               height={30}
               width={30}
             />
-          </div>
+          </span>
           {data?.items[0]?.callToActionKnapp}
         </button>
       </div>
