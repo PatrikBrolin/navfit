@@ -13,7 +13,7 @@ export default function Home({ modules, structuredData }) {
         pageMeta={{
           title: "Marcel Navarro - Licensierad personlig tränare | Navfit",
           description:
-            "Personliga tränare i Stockholm. Med skräddarsydda träningsprogram, expertcoaching, kostrådgivning och kontinuerligt stöd kan Marcel Navarro hjälpa dig att uppnå dina bästa resultat. Kontakta mig idag för att starta din träningsresa.",
+            "Få personlig träning i Stockholm med Marcel Navarro. Skräddarsydda program, expertcoaching, kostrådgivning och kontinuerligt stöd för dina bästa resultat. Kontakta mig idag för att påbörja din träningsresa.",
           structuredData: structuredData,
         }}
       >
