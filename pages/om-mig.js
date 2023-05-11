@@ -11,6 +11,7 @@ export default function About({ modules, structuredData }) {
           description:
             "Upptäck Marcel Navarro, en licensierad personlig tränare som är engagerad i att hjälpa klienter att uppnå sina fitnessmål. Lär dig mer om Marcel Navarro, hans/hennes erfarenhet, träningsfilosofi och personliga tillvägagångssätt för fitnessprogram.",
           structuredData: structuredData,
+          canonicalTag: "https://navfit.vercel.app/om-mig"
         }}
       >
         {modules?.map((module, i) => filter(module, i))}

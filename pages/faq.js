@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout/Layout";
 import { Get_FaqPage } from "@/lib/queries";
 import filter from "@/utils/filter";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
 
 export default function Faqs({ modules }) {
   return (
@@ -11,6 +11,7 @@ export default function Faqs({ modules }) {
           title: "Vanliga frågor och svar | Navfit",
           description:
             "Här hittar du bra information om vad en personlig tränare kan hjälpa dig med och vad du ska tänka på innan du bokar en personlig tränare ",
+            canonicalTag: "https://navfit.vercel.app/faq"
         }}
       >
         {modules?.map((module, i) => filter(module, i))}

@@ -10,7 +10,8 @@ export default function Contact({ modules, structuredData }) {
           title: "Kontakta mig | Navfit",
           description:
             "Kontakta Navfit för frågor eller bokning. Jag är här för att hjälpa dig och svara på dina frågpr. Fyll i formulärer eller använd kontaktinformationen för att nå mig direkt. ",
-            structuredData: structuredData
+            structuredData: structuredData,
+            canonicalTag: "https://navfit.vercel.app/kontakt"
         }}
       >
         {modules?.map((module, i) => filter(module, i))}

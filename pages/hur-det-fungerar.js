@@ -12,6 +12,7 @@ export default function HowItWorks({ modules, structuredData }) {
           description:
             "Steg för steg genomgång för hur processen går tillvid bokning av träning eller kostrådgivning av Marcel Navarro",
           structuredData: structuredData,
+          canonicalTag: "https://navfit.vercel.app/hur-det-fungerar"
         }}
       >
         {modules?.map((module, i) => filter(module, i))}

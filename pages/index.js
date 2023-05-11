@@ -15,6 +15,7 @@ export default function Home({ modules, structuredData }) {
           description:
             "Få personlig träning i Stockholm med Marcel Navarro. Skräddarsydda program, expertcoaching, kostrådgivning och kontinuerligt stöd för dina bästa resultat. Kontakta mig idag för att påbörja din träningsresa.",
           structuredData: structuredData,
+          canonicalTag: "https://navfit.vercel.app/"
         }}
       >
         {modules.map((module, i) => filter(module, i))}
