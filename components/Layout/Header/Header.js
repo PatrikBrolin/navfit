@@ -10,7 +10,6 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-
   const redirect = () => {
     router.push("/kontakt");
   };
@@ -34,10 +33,10 @@ export default function Header() {
         mobileMenuOpen && styles.mobileMenuOpen
       )}
     >
-      <h1 className={styles.logo}>
-        <Link href="/">NavFit</Link>
-      </h1>
       <nav className={cn(styles.nav, mobileMenuOpen && styles.mobileMenuOpen)}>
+        <h1 className={styles.logo}>
+          <Link href="/">NavFit</Link>
+        </h1>
         <ul className={styles.ul}>
           <li>
             <Link href="/">Hem</Link>
@@ -48,7 +47,7 @@ export default function Header() {
           <li>
             <Link href="/hur-det-fungerar">Hur det fungerar</Link>
           </li>
-       
+
           <li>
             <Link href="/faq">FAQ</Link>
           </li>
@@ -56,10 +55,11 @@ export default function Header() {
             <Link href="/kontakt">Kontakt</Link>
           </li>
           <li>
-          <Link href="/kontakt" className={styles.buttonLink}><div className={styles.button}>Kom igång</div></Link>
+            <Link href="/kontakt" className={styles.buttonLink}>
+              <div className={styles.button}>Kom igång</div>
+            </Link>
           </li>
         </ul>
-       
       </nav>
 
       <button

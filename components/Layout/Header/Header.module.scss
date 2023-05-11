@@ -18,20 +18,31 @@
   background-color: white;
   box-shadow: 0px 1px 8px 0px rgba($color: $bgColor, $alpha: 0.2);
 
-  .logo {
-    display: flex;
-    align-items: center;
-    a {
-      text-decoration: none;
-      font-family: $headline;
-      color: $bgColor;
-      opacity: 0.8;
-    }
-  }
   .nav {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     @include tablet-mobile {
       flex-direction: column;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      @include tablet-mobile {
+        position: absolute;
+        margin-left: 10%;
+        top: -60px;
+      }
+
+      a {
+        text-decoration: none;
+        font-family: $headline;
+        color: $bgColor;
+        opacity: 0.8;
+        @include tablet-mobile {
+          font-size: 30px;
+        }
+      }
     }
 
     .ul {
