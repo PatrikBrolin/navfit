@@ -29,9 +29,9 @@ export default function About({ data }) {
         {documentToReactComponents(data?.items[0]?.certifikat?.json)}
       </section>
       </main>
-      <aside className={styles.imageContainer}>
+      <div className={styles.imageContainer}>
         <img src={data?.items[0]?.bild?.url} alt={data?.items[0]?.bildText} />
-      </aside>
+      </div>
     </div>
   );
 }

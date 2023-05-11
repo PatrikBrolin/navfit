@@ -43,9 +43,9 @@ export default function Booking({ data }) {
             <span style={{ width: getProgressBarWidth() }}></span>
           </div>
         </div>
-        <section className={styles.textContainer}>
+        <div className={styles.textContainer}>
             {documentToReactComponents(stepText[currentStep - 1 ]?.stegText?.json)}
-        </section>
+        </div>
       </main>
     </div>
   );

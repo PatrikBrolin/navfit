@@ -97,7 +97,7 @@ export default function Contact({ showText, extraPadding }) {
     }
   };
   return (
-    <section className={cn(styles.contact, extraPadding && styles.extraPadding) }>
+    <div className={cn(styles.contact, extraPadding && styles.extraPadding) }>
       {showText && (
         <div className={styles.textContainer}>
           <h2>Vill du boka tid?</h2>
@@ -188,6 +188,6 @@ export default function Contact({ showText, extraPadding }) {
           Skicka
         </button>
       </form>
-    </section>
+    </div>
   );
 }

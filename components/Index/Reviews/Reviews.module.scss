@@ -11,6 +11,13 @@
   &::-webkit-scrollbar {
     display: none;
   }
+  .h2{
+    padding-left: 9.5%;
+    padding-top: 5%;
+    font-family: $ysabeau;
+    font-size: 40px;
+      white-space: nowrap;
+  }
   .ul {
     height: 100%;
     display: flex;
