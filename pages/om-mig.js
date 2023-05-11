@@ -45,7 +45,7 @@ export async function getStaticProps() {
     "@context": "https://schema.org/",
     "@type": "Person",
     name: "Marcel Navarro",
-    image: "data?.omMigCollection?.items[0]?.bild?.url",
+    image: data?.omMigCollection?.items[0]?.bild?.url,
     jobTitle: "Personlig tränare",
     description:
       "Jag är en livslång träningentusiast med över 25års träningserfarenhet och tusentals träningspass i ryggen. Med en bakgrund inom både fotboll och kampsport har jag erfarenhet av många olika typer av träningspass och fokus områden.",
