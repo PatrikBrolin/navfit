@@ -11,19 +11,35 @@ export default function ShortIntroduction({ data }) {
   };
   return (
     <section className={styles.introductionContainer}>
-      <img className={styles.img} src={data?.items[0]?.bild?.url} alt={data?.items[0]?.bildText} />
+      <div className={styles.imageContainer}>
+        <h2>Kort om mig</h2>
+        <img
+          className={styles.img}
+          src={data?.items[0]?.bild?.url}
+          alt={data?.items[0]?.bildText}
+        />
+      </div>
+
       <div className={styles.textSection}>
-        <aside className={styles.aside}>
+        <div className={styles.about}>
           <div className={styles.border}></div>
           {documentToReactComponents(data?.items[0]?.kortIntroduktion?.json)}
-          <button className={styles.button} onClick={redirect} aria-label="Kontakta mig knapp">
+          <button
+            className={styles.button}
+            onClick={redirect}
+            aria-label="Kontakta mig knapp"
+          >
             <div className={cn(styles.buttonDesign)}>
-              <Image src="/icons/caret.png" alt="Triangel ikon" height={30} width={30}/>
-   
+              <Image
+                src="/icons/caret.png"
+                alt="Triangel ikon"
+                height={30}
+                width={30}
+              />
             </div>
             Läs mer
           </button>
-        </aside>
+        </div>
       </div>
     </section>
   );
