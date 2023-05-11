@@ -34,7 +34,7 @@ export default function ShortIntroduction({ data }) {
                 width={30}
               />
             </div>
-            Läs mer
+           Ta reda på mer
           </Link>
         </div>
       </div>
