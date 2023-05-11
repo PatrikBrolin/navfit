@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout/Layout";
 import { Get_FaqPage } from "@/lib/queries";
 import filter from "@/utils/filter";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default function Faqs({ modules }) {
   return (
@@ -37,7 +38,6 @@ export async function getStaticProps() {
   );
 
   const { data: data } = await res.json();
-
   const keysArray = Object.keys(data);
   const modules = keysArray.map((key) => data[key]);
 

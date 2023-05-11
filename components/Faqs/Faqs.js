@@ -1,6 +1,6 @@
 import styles from "./Faqs.module.scss";
 import { useState, useEffect } from "react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
 import Accordion from "./Accordion/Accordion";
 
 export default function Faqs({ data }) {
