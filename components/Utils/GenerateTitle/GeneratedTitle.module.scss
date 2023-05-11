@@ -30,6 +30,7 @@
         left: 0;
         bottom: 35%;
         z-index: -1;
+        border-radius: 8px;
       }
       &::after {
         content: "";
@@ -39,6 +40,7 @@
         background-color: $accentColor;
         left: 0;
         bottom: 45%;
+       border-radius: 8px;
     
       }
     }

@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { useRouter } from "next/router";
 import cn from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ShortIntroduction({ data }) {
   const router = useRouter();
@@ -24,11 +25,7 @@ export default function ShortIntroduction({ data }) {
         <div className={styles.about}>
           <div className={styles.border}></div>
           {documentToReactComponents(data?.items[0]?.kortIntroduktion?.json)}
-          <button
-            className={styles.button}
-            onClick={redirect}
-            aria-label="Kontakta mig knapp"
-          >
+          <Link className={styles.button} href="/om-mig">
             <div className={cn(styles.buttonDesign)}>
               <Image
                 src="/icons/caret.png"
@@ -38,7 +35,7 @@ export default function ShortIntroduction({ data }) {
               />
             </div>
             Läs mer
-          </button>
+          </Link>
         </div>
       </div>
     </section>

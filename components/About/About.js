@@ -1,7 +1,6 @@
 import styles from "./About.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import { useEffect, useState } from "react";
 export default function About({ data }) {
 
   const renderOptions = {
