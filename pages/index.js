@@ -1,8 +1,5 @@
-import Head from "next/head";
-
 import { Get_IndexPage } from "@/lib/queries";
 import filter from "@/utils/filter";
-
 import Layout from "@/components/Layout/Layout";
 import Contact from "@/components/Index/Contact/Contact";
 

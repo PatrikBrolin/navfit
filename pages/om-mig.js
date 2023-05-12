@@ -37,7 +37,7 @@ export async function getStaticProps() {
       }),
     }
   );
-
+  const { data: data } = await res.json();
   const keysArray = Object.keys(data);
   const modules = keysArray.map((key) => data[key]);
 
