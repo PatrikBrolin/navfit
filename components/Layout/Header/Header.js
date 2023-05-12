@@ -6,15 +6,13 @@ import { useRouter } from "next/router";
 import cn from "classnames";
 
 export default function Header() {
-  const router = useRouter();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const [isScrolled, setIsScrolled] = useState(false); //checking if user has scrolled on the page 
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false); //form mobile view, keeping state if menu are open or not
 
-
-  const redirect = () => {
-    router.push("/kontakt");
-  };
+  
   useEffect(() => {
+    //Funciton that check if user has scrolled down on the page. this is for the changing the color of the header
     function handleScroll() {
       if (window.scrollY > 0) {
         setIsScrolled(true);
@@ -25,6 +23,7 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
   }, []);
+
 
   return (
     <header

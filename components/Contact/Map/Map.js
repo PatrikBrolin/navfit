@@ -2,9 +2,10 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
+// leaflet is a free to use downloadable packagage for maps
 const Map = () => {
 
-
+ // setting up a marker design 
   const redMarker = new L.Icon({
     iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
     iconSize: [25, 41],
@@ -14,6 +15,7 @@ const Map = () => {
   });
   
   return (
+    
     <MapContainer
       center={[59.20188, 17.7671]}
       zoom={10}

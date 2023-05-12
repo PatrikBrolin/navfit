@@ -3,28 +3,22 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export default function About({ data }) {
 
-  const renderOptions = {
-    renderText: text => {
-      return text.split('\n').reduce((children, textSegment, index) => {
-        return [...children, index > 0 && <br key={index} />, textSegment];
-      }, []);
-    },
-  };
-
   return (
     <div className={styles.aboutContainer}>
       <main>
       <section className={styles.education}>
         <h2>Utbildning:</h2>
+        { /* documentToReactComponents is a contentful function uset to write out the contenful rich text property */ }
         {documentToReactComponents(data?.items[0]?.utbildning?.json)}
       </section>
       <section className={styles.aboutText}>
       <h2>Bakgrund:</h2>
-
-        {documentToReactComponents(data?.items[0]?.paragrafText?.json, renderOptions)}
+      { /* documentToReactComponents is a contentful function uset to write out the contenful rich text property */ }
+        {documentToReactComponents(data?.items[0]?.paragrafText?.json)}
       </section>
       <section className={styles.certificates}>
         <h2>Certifikat:</h2>
+        { /* documentToReactComponents is a contentful function uset to write out the contenful rich text property */ }
         {documentToReactComponents(data?.items[0]?.certifikat?.json)}
       </section>
       </main>

@@ -1,10 +1,10 @@
 import styles from './GeneratedTitle.module.scss'
 import { useState, useRef, useEffect } from 'react';
 
-export default function GeneratedTitle({headline}){
+//This component creates the text in the hero section that writes out text like a typewriter
+export default function GeneratedTitle(){
 
-    const [fetchedHeader, setFetchedHeader] = useState(headline)
-    const [fullHeader, setFullHeader] = useState("Navarro ");
+    const [fullHeader, setFullHeader] = useState("Navarro "); 
     const [header, setHeader] = useState("");
     const headerRef = useRef("");
     const [headerAnimationDone, setHeaderAnimationDone] = useState(false);
@@ -25,6 +25,9 @@ export default function GeneratedTitle({headline}){
         }
     }, [headerAnimationDone]);
 
+    // this function creates the first part of the heading "Navarro"
+    //it takes the length of the state fullHeader and append one letter att a time to the state setHeader state
+    // i use a timeout to give the look of the text beeing writen out. 
     function createHeader() {
         for (let i = 0; i < fullHeader?.length; i++) {
             setTimeout(() => {
@@ -39,6 +42,9 @@ export default function GeneratedTitle({headline}){
             }, 100 * (i + 1));
         }
     }
+     // this function creates the last part of the heading "Fitness"
+    // it takes the length of the state fullHeaderAppeng and append one letter att a time to the state setHeaderAppend state
+    // i use a timeout to give the look of the text beeing writen out. 
     function createHeaderAppend() {
         for (let i = 0; i < fullHeaderAppend?.length; i++) {
             setTimeout(() => {

@@ -5,15 +5,17 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 
 export default function Booking({ data }) {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [stepText, setStepText] = useState(data?.items);
+  const [currentStep, setCurrentStep] = useState(1); // state thats keeps track of what slide to show
+  const [stepText, setStepText] = useState(data?.items); // state that keeps the correct text property
 
  
   
+  // function that handles change of the slide 
   const handleStep = (e) => {
     setCurrentStep(e.target.id);
   };
 
+  // function that handles animation and and sets the with of "orange bar to the correct width"
   const getProgressBarWidth = () => {
     const progress = ((currentStep - 1) / (data?.items?.length - 1)) * 100;
     return `${progress}%`;

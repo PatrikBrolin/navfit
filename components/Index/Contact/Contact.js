@@ -7,16 +7,19 @@ import emailjs from "emailjs-com";
 import Image from "next/image";
 
 export default function Contact({ showText, extraPadding }) {
-  const [loading, setLoading] = useState(false);
-  const [nameError, setNameError] = useState(false);
-  const [phoneError, setPhoneError] = useState(false);
-  const [typeError, setTypeError] = useState(false);
-  const [formError, setFormError] = useState(false);
+  const [loading, setLoading] = useState(false); // state used to handle loading phase of sending a email
+  const [nameError, setNameError] = useState(false);  // state to handle error validation
+  const [phoneError, setPhoneError] = useState(false); // state to handle error validation
+  const [typeError, setTypeError] = useState(false); // state to handle error validation
+  const [formError, setFormError] = useState(false); // state to handle error validation
 
+  //state to save the input data from the user
   const [formData, setFormData] = useState({
     name: "",
     phonenumber: "",
   });
+
+  // state to save the checkbox data that the user clickes
   const [trainingType, setTrainingType] = useState({
     personligträning: false,
     kostrådgivning: false,
@@ -24,6 +27,7 @@ export default function Contact({ showText, extraPadding }) {
     annat: false,
   });
 
+  //function that handles input form the user and assing the value to the correct property in formData state
   const handleInputChange = (event) => {
     setFormError(false);
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -35,13 +39,17 @@ export default function Contact({ showText, extraPadding }) {
     }
   };
 
+  //function that handles input form the user and assing the value to the correct property in trainingType state
   const handleCheckBox = (e) => {
     setTypeError(false);
     setTrainingType({ ...trainingType, [e.target.name]: e.target.checked });
   };
 
+
+  // submit function to handle the submiting of the form
   const handleSubmit = (e) => {
     e.preventDefault();
+    // validation that all the inputfield and required data is filled in 
     const validateName = formData?.name?.trim().length > 0;
     const validatePhonenumber = formData?.phonenumber?.trim().length > 0;
     const validateTrainingType =
@@ -50,6 +58,7 @@ export default function Contact({ showText, extraPadding }) {
       trainingType?.kampsport ||
       trainingType?.annat;
 
+    // setting error messages if any validation rule is not fullfilled
     if (!validateName) {
       setNameError(true);
     }
@@ -59,6 +68,8 @@ export default function Contact({ showText, extraPadding }) {
     if (!validateTrainingType) {
       setTypeError(true);
     }
+    // if all validation rules is fullfilled i call the the emailJs api with the data from the user
+    // emailJS is a email service to handle sending emails form a form
     if (validateName && validatePhonenumber && validateTrainingType) {
       setLoading(true);
       emailjs

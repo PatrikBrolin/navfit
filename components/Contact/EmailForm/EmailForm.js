@@ -8,17 +8,19 @@ import TextAreaInput from "@/components/Utils/FormInputs/TextAreaInput";
 import Image from "next/image";
 
 export default function EmailForm() {
+  // state that handles the users input 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
-  const [nameError, setNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [messageError, setMessageError] = useState(false);
-  const [formError, setFormError] = useState(false);
+  const [loading, setLoading] = useState(false); // state to handle loading phase 
+  const [nameError, setNameError] = useState(false); // state for error validation
+  const [emailError, setEmailError] = useState(false); // state for error validation
+  const [messageError, setMessageError] = useState(false); // state for error validation
+  const [formError, setFormError] = useState(false); // state for error validation
 
+  // function that handles input from the user and place it in the correct property in the formData state
   const handleInputChange = (event) => {
     setFormError(false);
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -32,13 +34,15 @@ export default function EmailForm() {
       setMessageError(false);
     }
   };
-
+  // submit function to handle the submiting of the form
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormError(false);
+     // validation that all the inputfield and required data is filled in 
     const validateName = formData?.name?.trim().length > 0;
     const validateEmail = ValidateEmail(formData?.email);
     const validateMessage = formData?.message.trim().length > 0;
+     // setting error messages if any validation rule is not fullfilled
     if (!validateName) {
       setNameError(true);
     }
@@ -48,6 +52,8 @@ export default function EmailForm() {
     if (!validateMessage) {
       setMessageError(true);
     }
+     // if all validation rules is fullfilled i call the the emailJs api with the data from the user
+    // emailJS is a email service to handle sending emails form a form
     if (validateName && validateEmail && validateMessage) {
       setLoading(true);
       emailjs

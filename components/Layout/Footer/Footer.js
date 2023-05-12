@@ -1,6 +1,7 @@
 import styles from "./Footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className={styles.footer}>

@@ -1,10 +1,7 @@
 import styles from "./Faqs.module.scss";
-import { useState, useEffect } from "react";
-
 import Accordion from "./Accordion/Accordion";
 
 export default function Faqs({ data }) {
-  const [showFaq, setShowFaq] = useState(true);
 
   return (
     <div className={styles.faqContainer}>

@@ -2,14 +2,11 @@ import styles from "./Hero.module.scss";
 import cn from "classnames";
 import GeneratedTitle from "../Utils/GenerateTitle/GeneratedTitle";
 import Image from "next/image";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 
 export default function Hero({ data }) {
-  const router = useRouter();
-  const redirect = () => {
-    router.push("/kontakt");
-  };
+
   return (
     <section className={styles.heroWrapper}>
       <div className={styles.imageContainer}>

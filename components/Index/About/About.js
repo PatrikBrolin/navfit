@@ -1,15 +1,11 @@
 import styles from "./About.module.scss";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { useRouter } from "next/router";
 import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function ShortIntroduction({ data }) {
-  const router = useRouter();
-  const redirect = () => {
-    router.push("/om-mig");
-  };
+
   return (
     <section className={styles.introductionContainer}>
       <div className={styles.imageContainer}>
