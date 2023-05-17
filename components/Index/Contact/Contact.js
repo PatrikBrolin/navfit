@@ -86,7 +86,7 @@ export default function Contact({ showText, extraPadding }) {
             }, ${trainingType.annat ? "Inget specifikt område" : ""}`,
           },
           process.env.NEXT_PUBLIC_PUBLICKEY
-        )
+        ) 
         .then(
           (result) => {
             setLoading(false);
